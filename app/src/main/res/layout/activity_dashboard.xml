@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundone"
+    android:padding="20dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@id/logo"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@id/logo"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"/>
+    <Space
+        android:id="@+id/sp1"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_below="@+id/logo">
+    </Space>
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/sp1">
+
+        <ImageView
+            android:src="@drawable/dummyimage"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_weight="1">
+        </ImageView>
+
+        <ImageView
+            android:src="@drawable/weather"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_weight="1">
+        </ImageView>
+
+        <ImageView
+            android:src="@drawable/location"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_weight="1"
+            android:onClick="routeToMap">
+        </ImageView>
+
+    </LinearLayout>
+    <Space
+        android:id="@+id/sp2"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_below="@+id/lay1">
+    </Space>
+    <LinearLayout
+        android:id="@+id/lay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/sp2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:text="Current Balance"
+            android:textColor="@color/white">
+        </TextView>
+
+        <TextView
+            android:id="@+id/currentAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:text="00 Rs"
+            android:textColor="@color/white">
+        </TextView>
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/sp3"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_below="@+id/lay2">
+    </Space>
+
+    <LinearLayout
+        android:id="@+id/lay3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/sp3">
+
+        <Button
+            android:id="@+id/history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overall Transaction History"
+            android:textSize="18dp"
+            android:layout_weight="1">
+        </Button>
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Income History"-->
+<!--            android:layout_weight="1">-->
+<!--        </Button>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Expense History"-->
+<!--            android:layout_weight="1">-->
+<!--        </Button>-->
+
+    </LinearLayout>
+    <Space
+        android:id="@+id/sp4"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_below="@+id/lay3">
+    </Space>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp4">
+
+        <ImageView
+            android:onClick="routeToRecordIncome"
+            android:id="@+id/student"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recordincome"/>
+
+        <ImageView
+            android:onClick="routeToRecordExpense"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recordexpense"/>
+
+    </LinearLayout>
+</RelativeLayout>

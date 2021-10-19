@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toLeftOf="@id/logo"
+            android:layout_marginTop="30dp"
+            android:background="@color/black"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/logo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/logo"
+            android:layout_marginTop="30dp"
+            android:background="@color/black"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/rel1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:text="Transcations"
+            android:textSize="30dp"
+            android:textColor="@color/black">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="75"
+            android:text="Dates"
+            android:textSize="30dp"
+            android:textColor="@color/black">
+
+        </TextView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lay2"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay1"
+        android:weightSum="100" >
+
+        <ListView
+            android:id="@+id/list1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="25">
+
+        </ListView>
+        <ListView
+            android:id="@+id/list2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="75">
+
+        </ListView>
+
+    </LinearLayout>
+</RelativeLayout>
